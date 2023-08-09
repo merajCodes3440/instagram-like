@@ -10,16 +10,19 @@ function showHeart(){
 
     setTimeout(()=>{
         heart.remove();
-    },1000)
+    },600)
 }
 
 imgarea.addEventListener("dblclick",function(){
     showHeart();
     counter();
 })
-
-let count = 0;
+let count = parseInt(localStorage.getItem("like")) || 0;
+clickCount.innerHTML = count;
+ // let count = localStorage.getItem("like") || 0
+//let count = 0;
 function counter(){
-    clickCount.innerHTML =++count;
-    
+    count++;
+    clickCount.innerHTML = count;
+    localStorage.setItem("like",count)
 }
