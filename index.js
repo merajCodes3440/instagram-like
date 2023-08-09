@@ -8,7 +8,9 @@ function showHeart(){
     heart.classList.add("fa-heart");
     imgarea.appendChild(heart);
 
-
+    setTimeout(()=>{
+        heart.remove();
+    },1000)
 }
 
 imgarea.addEventListener("dblclick",function(){
@@ -16,7 +18,7 @@ imgarea.addEventListener("dblclick",function(){
     counter();
 })
 
-let count =0;
+let count = 0;
 function counter(){
     clickCount.innerHTML =++count;
     

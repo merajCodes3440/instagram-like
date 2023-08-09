@@ -12,8 +12,10 @@
     justify-content: center;
     text-align: center;
     background-color:white;
-    color:black;
-    
+    color:black; 
+}
+.box{
+    padding-top:40px;
 }
 .img{
     box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
@@ -21,7 +23,8 @@
     height:450px;
     padding:2px;
     border-radius: 2px;
-    
+    display:flex;
+    text-align:center;
 }
 .img i{
     position:absolute;
@@ -29,12 +32,20 @@
     left:50%;
     transform: translate(-50%,-50%);
     color: #f8353f;
+    animation: heartGrow 1s linear;
 
+}
+@keyframes heartGrow{
+    100%{
+        transform: scale(10);
+        opacity: 0;
+    }
 }
 .img img{
     border-radius:5px;
     width:100%;
 }
 .clickCount{
+
     color:#F11A7B;
 }
